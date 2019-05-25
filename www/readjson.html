@@ -3,22 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/ionic.css">
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var url = "https://alfian99.000webhostapp.com/appcordova/www/json.php";
-        $.getJSON(url, function(result) {
-            console.log(result);
-            $.each(result, function(i, field) {
-                var id_makanan = field.id_makanan;
-                var nama_penjual = field.nama_penjual;
-                var nama_warung = field.nama_warung;
-                var nohp = field.nohp;
-                var id_penjual = field.id_penjual;
-                $("#listview").append("<a class='item' href='form.html?id_makanan=" + id_makanan + "&nama_penjual=" + nama_penjual + "&nama_warung=" + nama_warung + "&nohp=" + nohp + "&id_penjual=" + id_penjual + "'><h2>" + nama_penjual + " </h2><h2>" + nama_warung + " </h2><h2>" + nohp + "</h2><h2>" + id_penjual + "</h2></a>");
-            });
-        });
-    });
-    </script>
+   
 </head>
 
 <body>
@@ -28,7 +13,7 @@
     </div>
     <br/>
     <br/>
-    <ul class="list" id="listview">
+    <a href="index.html><button>Home</button></a>
     </ul>
 </body>
 
