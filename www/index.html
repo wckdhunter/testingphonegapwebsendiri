@@ -9,38 +9,7 @@
             
     <link rel="stylesheet" type="text/css" href="css/ionic.css">
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#insert").click(function() {
-            var nama_penjual = $("#nama_penjual").val();
-            var nama_warung = $("#nama_warung").val();
-            var nohp = $("#nohp").val();
-            var id_penjual = $("#id_penjual").val();
-            var dataString = "nama_penjual=" + nama_penjual + "&nama_warung=" + nama_warung + "&nohp=" + nohp + "&id_penjual=" + id_penjual + "&insert=";
-            if ($.trim(nama_penjual).length > 0 & $.trim(nama_warung).length > 0 & $.trim(nohp).length > 0 & $.trim(id_penjual).length > 0) {
-                $.ajax({
-                    type: "POST",
-                    url: "https://alfian99.000webhostapp.com/appcordova/www/insert.php",
-                    data: dataString,
-                    crossDomain: true,
-                    cache: false,
-                    beforeSend: function() {
-                        $("#insert").val('Connecting...');
-                    },
-                    success: function(data) {
-                        if (data == "success") {
-                            alert("inserted");
-                            $("#insert").val('submit');
-                        } else if (data == "error") {
-                            alert("error");
-                        }
-                    }
-                });
-            }
-            return false;
-        });
-    });
-    </script>
+    
     <style>
         .button-flat {
         	border: 1px solid #16a085;        /* border: tebal[px] tipe[solid,dashed,dotted] warna[#hex, rgb()]; */
@@ -92,7 +61,7 @@
         <br/>
         <br/>
         <div class="">
-            <center><input style="color:white;" type="button" id="insert" class="button-flat" value="Insert" /></center>
+              <center><a href="readjson.html"><button style="color:white;" type="button" >Insert</button></a><input style="color:white;" type="button" id="insert" class="button-flat" value="Insert" /></center>
         </div>
     </div>
     </div>
